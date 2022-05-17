@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Iron</title>
+    
+</head>
+<body>
+    <h1>Notas JS</h1>
+    <div>
+    <div>
+        <h2>  Variable  declaration with let </h2>
+        <p>To declare or define a variable, we can use the keyword let or const and in older versions of JavaScript, you would find the keyword var. var is still very much present, and its super important to understand similarities and differences between let and var and we will go over this a bit later during the course. For now, just keep in mind that you could in most cases use either let or var to declare the same variable</p>
+        <p> Adding some value to an already declared variable is known as variable initialization.
+
+        </p>
+        <p>If you don`t assign a value to a variable when you declare it, its default value will be initialized to undefined as seen in the next example (later we will talk more about this).
+
+        </p>
+
+
+    </div>
+
+    <div>
+        <h2>Variable declaration with const
+        </h2>
+        <p>This sometimes means that the value we assigned to a variable won’t ever change (in the case of strings, numbers, booleans - you will know all about this soon). Check the following example. If we try to change its value, we will get the error back:
+
+        </p>
+        <p>However, declaring a variable with const sometimes means that if we set the type of the variable as, for example, an object, we can’t turn it into an array, but we can add new properties to that object. (This sounds like just a bunch of random words put together, but in the next couple of lessons, it will make perfect sense, trust the process. :wink: )
+
+        </p>
+        <p>Unlike being able to declare variables and later to assign the value to them using the let keyword, when using const the variable needs to be assigned some value in the same moment when the variable is initialized.
+
+        </p>
+
+    </div>
+    <div>
+        <h2>Naming Rules</h2>
+        <p>Names can contain letters (uppercase and lowercase), numbers, and the symbols _ and $.
+            The first character of the name can’t be a number.
+            JavaScript allows a large variety of characters as variable names, so if you need to use ñ, ö or even π, you can, but is highly discouraged because others might not be able to use these characters and then your website will look broken.
+
+        </p>
+    </div>
+
+    <div>
+        <h2>NOTA importante</h2>
+        <p>Notice JavaScript is case sensitive, so capital letters do make a difference. For example, color and Color are different variable names.
+
+        Although we said you could use any English or non-English word, still there’s a bit constraint: there are some reserved keywords that can’t be used, for example: let, class, return, and function are reserved</p>
+    </div>
+
+    <div>
+        <h2>Cambiar el value de una variable</h2>
+        <p>The value of a variable declared with let can be changed whenever you want. To change a variable value, we just need to reference the variable by its name and assign a new value:
+
+        </p>
+
+    </div>
+    <div>
+        <h2>tipos de datos</h2>
+        <p>So here we saw we can change the value of a variable. Although we really didn’t touch the subject of variable types, let’s make here a short intro. Basic (primitive) data types in JavaScript are:
+
+            string,
+            number,
+            boolean.
+            There are some others, but we will be going in-depth when the bootcamp starts.
+            
+            Besides these, there are some non-primitive data types:
+            
+            object,
+            array.
+            Now when you know a little bit about data types, we can tell you also that you can change the variable’s type, not just its value.</p>
+
+            <h3>You can reassign values and change the data type of variables in JavaScript.
+
+            </h3>
+            <p>Keep in mind, you can only reassign the variable and change its value and type if you use let when declaring a variable.
+
+                To help yourself and others who work or will work on the same code, try to use const whenever there is a chance to do so.</p>
+
+    </div>
+    </div>
+    <div>
+        <div>
+            <h2>Concatenar con comillas simples o backticks</h2>
+            <p>String interpolation is a common practice that allows you to add the value of a variable directly inside a string. It is only available when using backticks and is achieved by wrapping a variable inside ${} and adding it to the string, check the code below and it will make more sense!</p>
+        </div>
+        <div>
+            <p>el codigo de concatener: //concatenar 
+                let emptyContainer = "";
+                emptyContainer += "Hello there, student!";
+                // += is equivalent to saying:
+                // emptyContainer = emptyContainer + "Hello there, student!";
+                console.log(emptyContainer); 
+                
+                // ERROR CASE
+                // At this moment the value of the emptyContainer is "Hello there, student!"
+                emptyContainer + " How are you?"; //incorrecto
+                // We would expect the value to be "Hello there, student! How are you?" 
+                // However, the value is still "Hello there, student!", because we didn't reassign the variable value with `+=`
+                console.log(emptyContainer);
+                
+                // If we want it to console "Hello there, student! How are you?",
+                // we need to have the following: emptyContainer += " How are you?";
+                
+                console.log(emptyContainer += " How are you?"); //correcto
+            </p>
+            
+        </div>
+        <div>
+            <h3> Accessing a single character of a string using its index
+            </h3>
+            <p>
+You can access characters inside of strings with their index number. The index determines the character order in the word, from left to right, but be aware the index always starts at 0. To access a character via its index you can use [] like shown in the example below.
+            </p>
+            <p>
+                As you can see, to use .toUpperCase() and any other methods in JS we always need to use () at the end. However, when we use .length and other attributes, we do not use the parentheses.
+
+:x: string.toUpperCase; :+1: string.toUpperCase();
+
+:x: string.length(); :+1: string.length;
+
+It sounds confusing now but later in the course, it will make sense when you learn more about attributes and methods. For now, try to make sure you use the correct syntax 
+            </p>
+        </div>
+        <div>
+            <h3>
+                .indexOf() 
+
+            </h3>
+            <p>
+                JavaScript has a cool indexOf() method that returns the index of a particular character/string occurrence. If the substring was not found, it returns -1. To use it you just need to put the character or characters string you want to know the index of inside the () of indexOf() as shown below.
+            </p>
+        </div>
+        <div>
+            <h3>
+                .slice(start, end)
+
+            </h3>
+            <p>
+                Found in the official MDN docs, the slice() method extracts a part of a string and returns it as a new string, without modifying the original string 
+            </p>
+            <p>
+                To use the .slice() method you need to add in the () of the method, the two indexes that will mark the start and end position of the new string you wish to extract, separated by a comma. Note that the index indicated in the end position will not be included.
+
+
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>
