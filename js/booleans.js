@@ -14,3 +14,21 @@ console.log(false || true); // ==> ? true bien
 console.log(!true || false); // ==> ? false bien
 console.log(17 == '17'); // ==> ? false mal (solo compara el dato, no el tipo)
 console.log(123 === '123'); // ==> ? false bien
+
+//  NOT
+let doesCode = true;
+if (!doesCode){
+  console.log("Ironhack is right place to be!");
+}
+
+// AND
+let lovesParty = true;
+if (doesCode && lovesParty){
+  console.log("You seem to be an Ironhacker!");
+}
+
+// OR
+let framework = "Express"
+if (doesCode && (framework === "Express" || framework === "React")){
+  console.log("You are a smart developer!");
+}
