@@ -29,3 +29,37 @@ while (counter2 >= 0) {
   console.log(counter2);
   counter2 -= 1; // <= 3. instead of increasing, decrease counter by 1
 }
+
+// loop con FOR
+for (let i = 1; i <= 10; i++){
+    console.log(i);
+}
+// Using a for loop, display a countdown from 10 to 0. You will need to write i-- in your for a loop. Inside the loop, write a console.log of the variable i and also, if i reached 0, console.log “Boom!”
+
+for (let i = ""; i.length <= 10; i += "*"){
+    console.log(i);
+}
+for (let i = 10; i >= 0; i--) {
+    console.log("boom!");
+    
+}
+
+
+// ejemplo de uso de break para salir de un loop
+for (let i = 1; i <= 30; i++){
+    if (i === 21){
+      console.log("TWENTY ONE! Black Jack, dale!");
+      break;
+    } else {
+      console.log(i);
+    }
+  }
+  // Sometimes you want to skip an iteration in a loop and continue to the next. If so, use the continue keyword in your loop combined with some sort of condition.
+  
+  for (let i = 1; i <= 30; i++){
+    if (i % 3 === 0) { 
+      continue; 
+    }
+    console.log(i);
+  }
+  
