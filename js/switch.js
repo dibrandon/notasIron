@@ -119,3 +119,6 @@ if (fourthPossibility ||
  } else {
      console.log("Something went wrong!")
  }
+
+
+ // As a bonus, try to convert the conditional into a switch statement.
