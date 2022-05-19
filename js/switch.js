@@ -34,6 +34,7 @@ switch (pet) {
     console.log("I'm a special pet!")
     break;
 }
+
 //To avoid code redundancy in switch statements, you can even write multiple cases to run the same block of code, like shown below:
 
 switch (expression) {
@@ -49,8 +50,41 @@ switch (expression) {
     default:
       // statements executed when none of the values match the value of the expression
       break;
-  }
+  } 
+
+  // -------------------------------------------------
+  // switch interno a una funcion de un examen, no usar, solo es registro.
+  switch (calendario) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+          //return 31
+          break;
+
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+        //  return 30
+          break;
+      case 2:
+          // return 28
+           break;
+        
+
+
+          
+          
+          break;
   
+      default:
+          break;
+  }
+// -----------------------------------------------------
 
   const fruit  = prompt ("Enter the fruit name:");
   let type = "";

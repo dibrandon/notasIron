@@ -19,3 +19,8 @@ console.log(firstHalfTurtles);
 secondHalfTurtles = allTurtles.slice(17)
 console.log(secondHalfTurtles);
 console.log('My favorites are: ' + secondHalfTurtles)
+
+
+function werewolfCheck (name) {
+  werewolfCheck.indexOf("were")
+}

@@ -23,7 +23,7 @@ else{
     
 }
 
-calc ("+", 2, 2); // expected 
+calc ("+", 2, 2); // expected 4
 
 // calc basica sin IFs
 

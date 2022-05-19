@@ -39,24 +39,29 @@ console.log(lastElement)
 animalArray.push("lizard");
 console.log(`Agrega al final: ${animalArray}`); // => After: dog,cat,fish,lizard
 
-.unshift() // If you want to add an element at the beginning of the array, what you are looking for is the .unshift() method.
+// .unshift() // If you want to add an element at the beginning of the array, what you are looking for is the .unshift() method.
 
 animalArray.unshift("whale")
 console.log(`unshift agrega al principio ${animalArray}`);
 
-.pop() // If you want to extract the last element of the array, then you should use the .pop() method.
+// .pop() // If you want to extract the last element of the array, then you should use the .pop() method.
 
 animalArray.pop("")
 console.log(`pop quita el ultimo elemento de un array ${animalArray}`);
 
 
-.shift() // In case you need to remove the first element of the array, you should use the .shift() method, since it extracts and returns the first element.
+//.shift() // In case you need to remove the first element of the array, you should use the .shift() method, since it extracts and returns the first element.
 
 animalArray.shift()
 console.log(`extrae el primer elemento de un array y devuelve el resto en el console.log, se supone q puedo usarlo con un return y trae solo el primer elemento. test array: ${animalArray}`)
 
+let myFirstAnimal = animalArray.shift();
+console.log(myFirstAnimal)
+let myLastAnimal = animalArray.pop()
+
+console.log()
 
 
 
-.splice()
+//.splice()
 
