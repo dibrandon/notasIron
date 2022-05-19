@@ -52,6 +52,20 @@ console.log(`pop quita el ultimo elemento de un array ${animalArray}`);
 
 //.shift() // In case you need to remove the first element of the array, you should use the .shift() method, since it extracts and returns the first element.
 
+// While using .pop() and .shift() to remove an element from an array you might be wondering, what if I want to use the removed element later? Luckily, these methods return the removed element, allowing you to store it inside a variable, like this:
+
+const animalArray = ['dog', 'cat', 'fish'];
+
+// removes the first element and stores it inside a variable
+let myFirstAnimal = animalArray.shift();
+// removes the last element and stores it inside a variable
+let myLastAnimal = animalArray.pop();
+
+console.log(animalArray); // => ["cat"]
+console.log(myFirstAnimal); // => "dog"
+console.log(myLastAnimal); // => "fish"
+
+
 animalArray.shift()
 console.log(`extrae el primer elemento de un array y devuelve el resto en el console.log, se supone q puedo usarlo con un return y trae solo el primer elemento. test array: ${animalArray}`)
 
@@ -61,7 +75,35 @@ let myLastAnimal = animalArray.pop()
 
 console.log()
 
+// --------------------------------------------------------------
+// Removing and/or adding Items in any position: .splice()
+// Sometimes, we may want to add/remove elements in any location besides the start or end of the array. To do this, we use a // slightly more complex method called .splice(). This method can receive either two or more arguments:
+// 
+// the first defines the index position from which you want to start deleting or adding elements,
+// the second defines how many items will be deleted. If this argument is 0, it will simply not remove anything,
+// the third (OPTIONAL) defines an item that will be added to that position. If the argument is not passed, it will simply add // nothing to the array.
 
 
 //.splice()
 
+
+const animalArray = ["dog", "cat", "fish", "lizard", "whale", "cheetah"];
+console.log(`Original: ${animalArray}`); // => Original: dog,cat,fish,lizard,whale,cheetah
+console.log("------");
+
+// "From the first element, remove one going forward"
+animalArray.splice(0, 1);
+console.log(`From the first element, remove one going forward: ${animalArray}`);
+// => From the first element, remove one going forward: cat,fish,lizard,whale,cheetah
+
+//  "From the second element, remove two going forward"
+animalArray.splice(2, 2);
+console.log(`From the second element, remove two going forward: ${animalArray}`);
+// => From the second element, remove two going forward: cat,fish,cheetah
+
+// If we pass a third argument
+// It is inserted as the replacement
+animalArray.splice(0, 1, "Something else");
+console.log(`If we pass a third argument: ${animalArray}`); // => If we pass a third argument: Something else,fish,cheetah
+
+// -----------------------------------------------------
