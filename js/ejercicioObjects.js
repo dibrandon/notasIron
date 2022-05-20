@@ -30,5 +30,3 @@ if ("discountPercentage" in product){
 }
 
 // funciona! no tocar.
-
-const me = {var age=31, var hair=brown}
