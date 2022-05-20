@@ -76,7 +76,12 @@ let myLastAnimal = animalArray.pop()
 console.log()
 
 // --------------------------------------------------------------
+
+.splice()
+
+
 // Removing and/or adding Items in any position: .splice()
+
 // Sometimes, we may want to add/remove elements in any location besides the start or end of the array. To do this, we use a // slightly more complex method called .splice(). This method can receive either two or more arguments:
 // 
 // the first defines the index position from which you want to start deleting or adding elements,
