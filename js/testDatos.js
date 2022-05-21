@@ -47,3 +47,33 @@ function printBio (user) {
   }
 
   // funciono :=)
+
+  function filterPizzas(pizzas) {
+    let newArray = []
+
+
+    return newArray
+  }
+// solucion...
+  function filterPizzas(pizzas) {
+    // your code
+    return pizzas.filter( ({type}) => type !== "pineapple");
+  }
+
+  // solucion de iron
+
+  function filterPizzas(pizzas) {
+    const filteredPizzas = [];
+    
+    for (let i = 0; i < pizzas.length; i++) {
+      const pizza = pizzas[i];
+      const pizzaType = pizza.type;
+      const isNotPineapple = pizzaType !== "pineapple";
+      
+      if (isNotPineapple) {
+        filteredPizzas.push(pizza);
+      }
+    }
+    
+    return filteredPizzas;
+  }
